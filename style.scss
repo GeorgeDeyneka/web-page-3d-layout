@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+// Navbar
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  height: 0.3rem;
+  .menu {
+    min-width: 72rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 4rem;
+      span {
+        font-weight: 300;
+      }
+    }
+    .burger {
+      height: 4rem;
+      width: 3rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .bar {
+        width: 1.9rem;
+        height: 1.5px;
+        border-radius: 2px;
+        background-color: #eee;
+        transition: 0.3s;
+        position: relative;
+        &:after,
+        &:before {
+          content: "";
+          position: absolute;
+          width: inherit;
+          height: inherit;
+          background: #eee;
+          transition: 0.5s;
+        }
+        &:after {
+          transform: translateY(9px);
+        }
+        &:before {
+          transform: translateY(-9px);
+        }
+      }
+    }
+  }
+}
+
+// Page
+.container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #485461;
+  border-image: linear-gradient(135deg, #485461 0%, #28313b 74%);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  // Main
+  .main {
+    position: relative;
+    width: 100%;
+    left: 0;
+    z-index: 5;
+    overflow: hidden;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    header {
+      min-height: 100vh;
+      width: 100%;
+      position: relative;
+      &.header__one {
+        background: url("/img/background-1.jpg") no-repeat top center/cover;
+      }
+      &.header__two {
+        background: url("/img/background-2.jpg") no-repeat top center/cover;
+      }
+      &.header__three {
+        background: url("/img/background-3.jpg") no-repeat top center/cover;
+      }
+      &.header__four {
+        background: url("/img/background-4.jpg") no-repeat top center/cover;
+      }
+      &.header__five {
+        background: url("/img/background-5.jpg") no-repeat top center/cover;
+      }
+      &.header__six {
+        background: url("/img/background-6.jpg") no-repeat top center/cover;
+      }
+      .header {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(43, 51, 59, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__item {
+          max-width: 35rem;
+          text-align: center;
+          color: white;
+          padding: 0 2rem;
+          .title {
+            font-size: 2.7rem;
+          }
+          .btn {
+            margin-top: 1rem;
+            padding: 0.6rem 1.6rem;
+            background-color: #1179e7;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  // Shadows
+  .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: 0.5s;
+    background: white;
+    &.one {
+      z-index: -1;
+      opacity: 0.15;
+    }
+    &.two {
+      z-index: -2;
+      opacity: 0.1;
+    }
+  }
+}
+
+// Links
+.links {
+  position: absolute;
+  width: 30%;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    text-decoration: none;
+    color: #eee;
+    padding: 0.07rem 0;
+    font-size: 1rem;
+    display: inline-block;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: hide 0.6s forwards ease;
+  }
+  ul {
+    list-style: none;
+  }
+}
+
+// Animations
+.container.active {
+  .bar {
+    transform: rotate(360deg);
+    background-color: transparent;
+    &:before {
+      transform: translateY(0) rotate(45deg);
+    }
+    &:after {
+      transform: translateY(0) rotate(-45deg);
+    }
+  }
+
+  .main {
+    animation: main-animation 1s ease;
+    cursor: pointer;
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+    &:hover {
+      transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
+      + .shadow.one {
+        transform: perspective(1300px) rotateY(20deg) translateZ(230px)
+          scale(0.5);
+      }
+    }
+  }
+
+  .shadow.one {
+    animation: shadow-one 0.6s ease-out;
+    transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+  }
+
+  .shadow.two {
+    animation: shadow-two 0.6s ease-out;
+    transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+  }
+
+  .links a {
+    animation: appear 0.5s forwards ease var(--i);
+  }
+}
+
+// Keyframes
+@keyframes main-animation {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+}
+
+@keyframes shadow-one {
+  0% {
+    transform: translate(0);
+  }
+  5% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+  100% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+  }
+}
+
+@keyframes shadow-two {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+  100% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
