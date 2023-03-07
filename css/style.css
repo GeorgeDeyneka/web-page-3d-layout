@@ -89,22 +89,22 @@
   position: relative;
 }
 .container .main header.header__one {
-  background: url("/img/background-1.jpg") no-repeat top center/cover;
+  background: url("../img/background-1.jpg") no-repeat top center/cover;
 }
 .container .main header.header__two {
-  background: url("/img/background-2.jpg") no-repeat top center/cover;
+  background: url("../img/background-2.jpg") no-repeat top center/cover;
 }
 .container .main header.header__three {
-  background: url("/img/background-3.jpg") no-repeat top center/cover;
+  background: url("../img/background-3.jpg") no-repeat top center/cover;
 }
 .container .main header.header__four {
-  background: url("/img/background-4.jpg") no-repeat top center/cover;
+  background: url("../img/background-4.jpg") no-repeat top center/cover;
 }
 .container .main header.header__five {
-  background: url("/img/background-5.jpg") no-repeat top center/cover;
+  background: url("../img/background-5.jpg") no-repeat top center/cover;
 }
 .container .main header.header__six {
-  background: url("/img/background-6.jpg") no-repeat top center/cover;
+  background: url("../img/background-6.jpg") no-repeat top center/cover;
 }
 .container .main header .header {
   position: absolute;
