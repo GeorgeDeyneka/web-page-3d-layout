@@ -69,8 +69,7 @@
   min-height: 100vh;
   width: 100%;
   background-color: #485461;
-  -o-border-image: linear-gradient(135deg, #485461 0%, #28313b 74%);
-     border-image: linear-gradient(135deg, #485461 0%, #28313b 74%);
+  border-image: linear-gradient(135deg, #485461 0%, #28313b 74%);
   overflow: hidden;
   transform-style: preserve-3d;
 }
@@ -181,8 +180,7 @@
   transition: 0.3s;
   opacity: 0;
   transform: translateY(10px);
-  -webkit-animation: hide 0.6s forwards ease;
-          animation: hide 0.6s forwards ease;
+  animation: hide 0.6s forwards ease;
 }
 .links ul {
   list-style: none;
@@ -199,8 +197,7 @@
   transform: translateY(0) rotate(-45deg);
 }
 .container.active .main {
-  -webkit-animation: main-animation 1s ease;
-          animation: main-animation 1s ease;
+  animation: main-animation 1s ease;
   cursor: pointer;
   transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
 }
@@ -211,27 +208,15 @@
   transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
 }
 .container.active .shadow.one {
-  -webkit-animation: shadow-one 0.6s ease-out;
-          animation: shadow-one 0.6s ease-out;
+  animation: shadow-one 0.6s ease-out;
   transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
 }
 .container.active .shadow.two {
-  -webkit-animation: shadow-two 0.6s ease-out;
-          animation: shadow-two 0.6s ease-out;
+  animation: shadow-two 0.6s ease-out;
   transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
 }
 .container.active .links a {
-  -webkit-animation: appear 0.5s forwards ease var(--i);
-          animation: appear 0.5s forwards ease var(--i);
-}
-
-@-webkit-keyframes main-animation {
-  from {
-    transform: translate(0);
-  }
-  to {
-    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
-  }
+  animation: appear 0.5s forwards ease var(--i);
 }
 
 @keyframes main-animation {
@@ -240,17 +225,6 @@
   }
   to {
     transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
-  }
-}
-@-webkit-keyframes shadow-one {
-  0% {
-    transform: translate(0);
-  }
-  5% {
-    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
-  }
-  100% {
-    transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
   }
 }
 @keyframes shadow-one {
@@ -264,17 +238,6 @@
     transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
   }
 }
-@-webkit-keyframes shadow-two {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
-  }
-  100% {
-    transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
-  }
-}
 @keyframes shadow-two {
   0% {
     transform: translate(0);
@@ -286,16 +249,6 @@
     transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
   }
 }
-@-webkit-keyframes hide {
-  from {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-}
 @keyframes hide {
   from {
     opacity: 1;
@@ -304,16 +257,6 @@
   to {
     opacity: 0;
     transform: translateY(10px);
-  }
-}
-@-webkit-keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
   }
 }
 @keyframes appear {

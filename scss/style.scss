@@ -15,6 +15,7 @@
   width: 100%;
   z-index: 10;
   height: 0.3rem;
+
   .menu {
     min-width: 72rem;
     width: 100%;
@@ -24,16 +25,19 @@
     justify-content: space-between;
     align-items: center;
     color: white;
+
     .logo {
       font-size: 1.1rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 2px;
       line-height: 4rem;
+
       span {
         font-weight: 300;
       }
     }
+
     .burger {
       height: 4rem;
       width: 3rem;
@@ -41,6 +45,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
+
       .bar {
         width: 1.9rem;
         height: 1.5px;
@@ -48,6 +53,7 @@
         background-color: #eee;
         transition: 0.3s;
         position: relative;
+
         &:after,
         &:before {
           content: "";
@@ -57,9 +63,11 @@
           background: #eee;
           transition: 0.5s;
         }
+
         &:after {
           transform: translateY(9px);
         }
+
         &:before {
           transform: translateY(-9px);
         }
@@ -86,28 +94,36 @@
     transform-origin: left;
     transform-style: preserve-3d;
     transition: 0.5s;
+
     header {
       min-height: 100vh;
       width: 100%;
       position: relative;
+
       &.header__one {
         background: url("/img/background-1.jpg") no-repeat top center/cover;
       }
+
       &.header__two {
         background: url("/img/background-2.jpg") no-repeat top center/cover;
       }
+
       &.header__three {
         background: url("/img/background-3.jpg") no-repeat top center/cover;
       }
+
       &.header__four {
         background: url("/img/background-4.jpg") no-repeat top center/cover;
       }
+
       &.header__five {
         background: url("/img/background-5.jpg") no-repeat top center/cover;
       }
+
       &.header__six {
         background: url("/img/background-6.jpg") no-repeat top center/cover;
       }
+
       .header {
         position: absolute;
         width: 100%;
@@ -118,14 +134,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
         &__item {
           max-width: 35rem;
           text-align: center;
           color: white;
           padding: 0 2rem;
+
           .title {
             font-size: 2.7rem;
           }
+
           .btn {
             margin-top: 1rem;
             padding: 0.6rem 1.6rem;
@@ -153,10 +172,12 @@
     transform-origin: left;
     transition: 0.5s;
     background: white;
+
     &.one {
       z-index: -1;
       opacity: 0.15;
     }
+
     &.two {
       z-index: -2;
       opacity: 0.1;
@@ -175,6 +196,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   a {
     text-decoration: none;
     color: #eee;
@@ -189,6 +211,7 @@
     transform: translateY(10px);
     animation: hide 0.6s forwards ease;
   }
+
   ul {
     list-style: none;
   }
@@ -199,9 +222,11 @@
   .bar {
     transform: rotate(360deg);
     background-color: transparent;
+
     &:before {
       transform: translateY(0) rotate(45deg);
     }
+
     &:after {
       transform: translateY(0) rotate(-45deg);
     }
@@ -211,8 +236,10 @@
     animation: main-animation 1s ease;
     cursor: pointer;
     transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+
     &:hover {
       transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
+
       + .shadow.one {
         transform: perspective(1300px) rotateY(20deg) translateZ(230px)
           scale(0.5);
@@ -240,6 +267,7 @@
   from {
     transform: translate(0);
   }
+
   to {
     transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
   }
@@ -249,9 +277,11 @@
   0% {
     transform: translate(0);
   }
+
   5% {
     transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
   }
+
   100% {
     transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
   }
@@ -261,9 +291,11 @@
   0% {
     transform: translate(0);
   }
+
   20% {
     transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
   }
+
   100% {
     transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
   }
@@ -274,6 +306,7 @@
     opacity: 1;
     transform: translateY(0px);
   }
+
   to {
     opacity: 0;
     transform: translateY(10px);
@@ -285,6 +318,7 @@
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0px);
